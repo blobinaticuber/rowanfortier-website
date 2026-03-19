@@ -15,14 +15,15 @@
 /* Style the links inside the navigation bar */
 .topnav .nav a {
   float: left;
-  background-color: #1d0648;
+  background-color: #3300FF;
   color: white;
   text-align: center;
   padding: 16px;
   text-decoration: none;
   font-size: 17px;
-  border: 2px solid white;
-  border-radius: 0.5em 1em 0.5em 1em;
+  border-radius: 1em;
+  border: 0.2em solid rgb(255, 255, 255);
+  /* box-shadow: 0.2em 0.2em rgb(255, 255, 255); */
   font-weight: bold;
   margin: 0.5em;
   transition: 0.3s;
@@ -38,7 +39,7 @@
 
 /* Add a color to the active/current link */
 .topnav .nav a.active {
-  background-color: #5404aa;
+  background-color: #330088;
   color: white;
 }
 
