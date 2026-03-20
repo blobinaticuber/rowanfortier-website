@@ -1,0 +1,33 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    height: 10rem;
+}
+
+.hstack {
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+i{
+    font-size: 3em;
+    color: white;
+}
+
+svg {
+    color: white;
+    height: 3em;
+    width: 3em;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}

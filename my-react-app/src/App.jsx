@@ -14,6 +14,7 @@ function App() {
   const [name, setName] = useState('unknown')
 
   return (
+    <div style={{paddingBottom: "10rem"}}>
     <Router>
       <Header/>
       <Routes>
@@ -21,6 +22,7 @@ function App() {
         <Route path="/projects" element={<Projects/>} />
       </Routes>
     </Router>
+    </div>
   )
 }
 

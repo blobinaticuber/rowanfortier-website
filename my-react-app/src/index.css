@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  padding-bottom: 50px;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -25,6 +29,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;
   /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
@@ -65,4 +70,17 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.hstack {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.vstack {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
 }
