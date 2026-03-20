@@ -9,19 +9,11 @@
   	background-color: #000000;
 }
 
-
-
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-/* h1 { */
-	/* animation: auroraText 10s ease-in-out alternate infinite; */
-/* } */
-
-@keyframes auroraText {
-  0% {text-shadow: 0px -15px 15px rgba(128, 0, 94, 0.8), 0px -4px 15px rgba(32, 220, 241, 0.8);}
-  33.33% {text-shadow: 0px 4px 12px rgba(127, 29, 218, 0.8), 5px -10px 25px rgba(241, 32, 32, 0.8);}
-  66.66% {text-shadow: 0px 0px 50px rgba(29, 218, 130, 0.8), 15px -5px 15px rgba(255, 0, 255, 0.8);}
-  100% {text-shadow: 0px -15px 15px rgba(76, 29, 218, 0.8), 0px -4px 15px rgba(241, 123, 32, 0.8);}
+@media (prefers-color-scheme: light) {
+	#root {
+		background-color: #FFFFFF;
+	}
+	h1, h2, h3, p {
+		color: #000000;
+	}
 }

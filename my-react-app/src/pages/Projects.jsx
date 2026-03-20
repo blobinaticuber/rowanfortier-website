@@ -13,7 +13,7 @@ export function Projects() {
                         <ImageShape border shape="circle" path="/src/assets/projects/helloStarsLogo.png"/>
                         <div className="vstack">
                             <h2>Hello, Stars!</h2>
-                            <p><b>First place</b> project of the 2025 Girls in Tech Hackathon. Hello, Stars! is a gamified platform to learn about stargazing - complete with user accounts, image recognition, database integration, and more.</p>
+                            <p>First place project of the 2025 Girls in Tech Hackathon. Hello, Stars! is a gamified platform to learn about stargazing - complete with user accounts, image recognition, database integration, and more.</p>
                         </div>
                     </Card>
 

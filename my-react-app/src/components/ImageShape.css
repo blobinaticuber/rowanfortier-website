@@ -19,6 +19,6 @@
 }
 
 .border {
-    border: 0.2em solid rgb(255, 255, 255);
-    box-shadow: 0.3em 0.3em rgb(255, 255, 255);
+    border: 0.2em solid var(--padborder-color);
+    box-shadow: 0.3em 0.3em var(--padborder-color);
 }

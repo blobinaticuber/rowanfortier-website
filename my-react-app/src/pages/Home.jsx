@@ -6,7 +6,7 @@ export function Home() {
     return (
         <>
             <h1>Rowan Fortier </h1>
-            <Card color="#E3A018">
+            <Card color="var(--yellow)">
                 <div className="hstack">
                     <ImageShape border shape="square" path="/src/assets/rowan.png"/>
                     <div className="vstack">

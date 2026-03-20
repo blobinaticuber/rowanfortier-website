@@ -7,7 +7,7 @@ import { FaYoutube } from "react-icons/fa";
 export function Footer() {
     return (
         <footer>
-            <Card color="#3300FF">
+            <Card color="var(--blue)">
                 <div className="hstack" >
                     <a href="https://github.com/blobinaticuber" target="_blank">
                         <FaGithub />
