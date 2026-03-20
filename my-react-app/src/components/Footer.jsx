@@ -19,6 +19,7 @@ export function Footer() {
                         <FaYoutube />
                     </a>
                 </div>
+                <p>© 2026 Rowan Fortier</p>
             </Card>
         </footer>
     )
