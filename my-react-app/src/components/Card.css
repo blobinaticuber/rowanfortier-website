@@ -1,7 +1,7 @@
 
 .card-box {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 1em;
     transition: 0.3s;
     /* max-width: 80%; */
