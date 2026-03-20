@@ -1,0 +1,24 @@
+.circle {
+    border-radius: 100%;
+    width: 10em;
+    height: 10em;
+    margin: 0.5em;
+}
+
+.squircle {
+    border-radius: 1em;
+    width: 10em;
+    height: 10em;
+    margin: 0.5em;
+}
+
+.square {
+    width: 10em;
+    height: 10em;
+    margin: 0.5em;
+}
+
+.border {
+    border: 0.2em solid rgb(255, 255, 255);
+    box-shadow: 0.3em 0.3em rgb(255, 255, 255);
+}

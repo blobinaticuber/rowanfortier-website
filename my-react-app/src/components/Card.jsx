@@ -1,5 +1,4 @@
 import './Card.css'
-import { ImageCircle } from '../components/ImageCircle'
 
 export function Card(props) {
 
