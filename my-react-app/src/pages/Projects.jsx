@@ -2,6 +2,7 @@ import { Footer } from "../components/Footer"
 import { Card } from "../components/Card"
 import './Projects.css'
 import { ImageShape } from "../components/ImageShape"
+import { MdDeveloperBoard } from "react-icons/md";
 
 export function Projects() {
     return (
@@ -18,7 +19,7 @@ export function Projects() {
                     </Card>
 
                     <Card color="var(--blue">
-                        <ImageShape shape="squircle" path="/src/assets/projects/canvasConnectLogo.png"/>
+                        <MdDeveloperBoard style={{width: `10em`, height: `10em`, margin: `0.5em`}}/>
                         <div className="vstack">
                             <h2>Canvas Connect</h2>
                             <p>First place winning project of the C<sup>2</sup> Hacks 2025 hackathon. Canvas Connect is a browser extension that adds new ways to discover clubs, school events, and group chat with classmates directly in Canvas!</p>
