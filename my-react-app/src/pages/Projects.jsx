@@ -8,8 +8,11 @@ export function Projects() {
     return (
         <>
             <h1>Projects</h1>
+
                 <h2>Hackathons</h2>
+
                 <div className="grid">
+
                     <Card color="var(--pink)">
                         <ImageShape border shape="circle" path="/src/assets/projects/helloStarsLogo.png"/>
                         <div className="vstack">
@@ -27,7 +30,21 @@ export function Projects() {
                     </Card>
 
                 </div>
+
                 <h2>Personal Projects</h2>
+
+                <div className="grid">
+                    
+                    <Card color="var(--purple)">
+                        <ImageShape shape="squircle" path="/src/assets/projects/HSC2.svg"/>
+                        <div className="vstack">
+                            <h2>Hypercubing.xyz</h2>
+                            <p>A wiki and leaderboard for the hypercubing community. I worked on the content and organization for many of the pages, as well as the frontend of the new leaderboard and verifying submissions.</p>
+                        </div>
+                    </Card>
+
+                </div>
+
 
             <Footer/>
         </>

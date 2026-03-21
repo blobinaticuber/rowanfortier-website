@@ -5,7 +5,7 @@ import { ImageShape } from '../components/ImageShape'
 export function Home() {
     return (
         <>
-            <h1>Rowan Fortier </h1>
+            <h1>Rowan Fortier</h1>
             <Card color="var(--yellow)">
                 <div className="hstack">
                     <ImageShape border shape="square" path="/src/assets/rowan.png"/>
