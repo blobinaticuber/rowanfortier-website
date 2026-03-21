@@ -35,7 +35,7 @@ export function Projects() {
 
                 <div className="grid">
 
-                    <Card color="var(--purple)">
+                    <Card link="https://hypercubing.xyz/" color="var(--purple)">
                         <ImageShape shape="squircle" path="/src/assets/projects/HSC2.svg"/>
                         <div className="vstack">
                             <h2>Hypercubing.xyz</h2>
@@ -43,7 +43,7 @@ export function Projects() {
                         </div>
                     </Card>
 
-                    <Card color="var(--gray)">
+                    <Card link="https://github.com/blobinaticuber/3x3x3-simulator" color="var(--gray)">
                         <ImageShape border shape="squircle" path="/src/assets/projects/processing-3x3x3.png"/>
                         <div className="vstack">
                             <h2>3x3x3 Simulator</h2>
