@@ -12,10 +12,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* dark mode color vars */
   --padborder-color: #FFFFFF;
   --yellow: #E3A018;
   --blue: #3300FF;
   --purple: #330088;
+  --pink: #FF69B4;
 }
 
 #root {
@@ -71,6 +73,7 @@ button:focus-visible {
     --yellow: #FFDB58;
     --blue: #69D2E7;
     --purple: #C4A1FF;
+    --pink: #FFB2EF;
   }
   a:hover {
     color: #747bff;

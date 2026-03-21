@@ -9,7 +9,7 @@ export function Projects() {
             <h1>Projects</h1>
                 <h2>Hackathons</h2>
                 <div className="grid">
-                    <Card color="#FF00F5">
+                    <Card color="var(--pink)">
                         <ImageShape border shape="circle" path="/src/assets/projects/helloStarsLogo.png"/>
                         <div className="vstack">
                             <h2>Hello, Stars!</h2>
@@ -17,7 +17,7 @@ export function Projects() {
                         </div>
                     </Card>
 
-                    <Card color="#3300FF">
+                    <Card color="var(--blue">
                         <ImageShape shape="squircle" path="/src/assets/projects/canvasConnectLogo.png"/>
                         <div className="vstack">
                             <h2>Canvas Connect</h2>
