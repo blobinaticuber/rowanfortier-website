@@ -90,6 +90,15 @@ button:focus-visible {
   justify-content: center;
 }
 
+@media (max-width: 700px) {
+  .hstack {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+}
+
 .vstack {
   padding: 1em;
   display: flex;
