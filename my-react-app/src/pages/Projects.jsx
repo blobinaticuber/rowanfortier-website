@@ -34,12 +34,20 @@ export function Projects() {
                 <h2>Personal Projects</h2>
 
                 <div className="grid">
-                    
+
                     <Card color="var(--purple)">
                         <ImageShape shape="squircle" path="/src/assets/projects/HSC2.svg"/>
                         <div className="vstack">
                             <h2>Hypercubing.xyz</h2>
                             <p>A wiki and leaderboard for the hypercubing community. I worked on the content and organization for many of the pages, as well as the frontend of the new leaderboard and verifying submissions.</p>
+                        </div>
+                    </Card>
+
+                    <Card color="var(--gray)">
+                        <ImageShape border shape="squircle" path="/src/assets/projects/processing-3x3x3.png"/>
+                        <div className="vstack">
+                            <h2>3x3x3 Simulator</h2>
+                            <p>My first ever functioning Rubik's Cube simulator program without spaghetti code! It uses linear algebra to keep track of the puzzle state and draw the graphics. There are keybinds for twists and rotations, as well as mouse controls to view the puzzle from different angles.</p>
                         </div>
                     </Card>
 
