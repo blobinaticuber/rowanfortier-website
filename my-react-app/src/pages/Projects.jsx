@@ -17,7 +17,7 @@ export function Projects() {
                         <ImageShape border shape="circle" path="/src/assets/projects/helloStarsLogo.png"/>
                         <div className="vstack">
                             <h2>Hello, Stars!</h2>
-                            <p>First place project of the 2025 Girls in Tech Hackathon. Hello, Stars! is a gamified platform to learn about stargazing - complete with user accounts, image recognition, database integration, and more.</p>
+                            <p>First place winning project of the 2025 Girls in Tech Hackathon. Hello, Stars! is a gamified platform to learn about stargazing - complete with user accounts, image recognition, database integration, and more.</p>
                         </div>
                     </Card>
 
@@ -25,7 +25,7 @@ export function Projects() {
                         <MdDeveloperBoard style={{width: `10em`, height: `10em`, margin: `0.5em`}}/>
                         <div className="vstack">
                             <h2>Canvas Connect</h2>
-                            <p>First place winning project of the C<sup>2</sup> Hacks 2025 hackathon. Canvas Connect is a browser extension that adds new ways to discover clubs, school events, and group chat with classmates directly in Canvas!</p>
+                            <p>First place winning project of the C<sup>2</sup> Hacks 2025 hackathon. Canvas Connect is a browser extension that adds new ways to discover clubs, school events, and group chats with classmates directly in Canvas!</p>
                         </div>
                     </Card>
 
