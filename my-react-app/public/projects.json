@@ -9,7 +9,8 @@
             },
             "title" : "Hello, Stars!",
             "description" : "First place winning project of the 2025 Girls in Tech Hackathon. Hello, Stars! is a gamified platform to learn about stargazing - complete with user accounts, image recognition, database integration, and more.",
-            "link" : null
+            "link" : null,
+            "categories" : ["School"]
         },
 
         {
