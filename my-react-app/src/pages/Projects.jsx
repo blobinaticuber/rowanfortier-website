@@ -4,22 +4,45 @@ import './Projects.css'
 import { ImageShape } from "../components/ImageShape"
 import { MdDeveloperBoard } from "react-icons/md";
 
+import {useState, useEffect} from 'react';
+import jsonData from '/public/projects.json'
+
 export function Projects() {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch('projects.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error fetching JSON');
+            }
+            return response.json();
+        })
+        .then(data => {
+            setData(data.projects);
+            console.log(data);
+        })
+
+    }, [])
+
+
     return (
         <>
             <h1>Projects</h1>
-
-                <h2>Hackathons</h2>
-
                 <div className="grid">
-
-                    <Card color="var(--pink)">
+                {data.map((projects) => (
+                    <Card link={projects.link} color={projects.color}>
                         <div className="vstack">
-                            <ImageShape shape="circle" path="/projects/helloStarsLogo.png"/>
-                            <h2>Hello, Stars!</h2>
-                            <p>First place winning project of the 2025 Girls in Tech Hackathon. Hello, Stars! is a gamified platform to learn about stargazing - complete with user accounts, image recognition, database integration, and more.</p>
+                            <ImageShape shape={projects.image.shape} path={projects.image.path}/>
+                            <h2>{projects.title}</h2>
+                            <p>{projects.description}</p>
                         </div>
                     </Card>
+                ))}
+                </div>
+
+                {/*
 
                     <Card color="var(--blue)">
                         <div className="vstack">
@@ -30,10 +53,6 @@ export function Projects() {
                     </Card>
 
                 </div>
-
-                <h2>Personal Projects</h2>
-
-                <div className="grid">
 
                     <Card link="https://hypercubing.xyz/" color="var(--purple)">
                         <div className="vstack">
@@ -51,7 +70,7 @@ export function Projects() {
                         </div>
                     </Card>
 
-                </div>
+                */}
 
 
             <Footer/>
