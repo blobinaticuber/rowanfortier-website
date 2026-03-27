@@ -1,5 +1,8 @@
 .circle {
     border-radius: 100%;
+}
+
+.projectImg {
     width: 10em;
     height: 10em;
     margin: 0.5em;
@@ -7,15 +10,10 @@
 
 .squircle {
     border-radius: 1em;
-    width: 10em;
-    height: 10em;
-    margin: 0.5em;
 }
 
 .square {
-    width: 10em;
-    height: 10em;
-    margin: 0.5em;
+    border-radius: 0;
 }
 
 .border {
