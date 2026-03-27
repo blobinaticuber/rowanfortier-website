@@ -45,6 +45,17 @@
             "title" : "3x3x3 Simulator",
             "description" : "My first ever functioning Rubik's Cube simulator program without spaghetti code! It uses linear algebra to keep track of the puzzle state and draw the graphics. There are keybinds for twists and rotations, as well as mouse controls to view the puzzle from different angles.",
             "link" : "https://github.com/blobinaticuber/3x3x3-simulator"
+        },
+        {
+            "key" : 5,
+            "color" : "var(--gray)",
+            "image" : {
+                "shape": "squircle",
+                "path" : "/projects/zirconium_ingot.png"
+            },
+            "title" : "Stella Magnus",
+            "description" : "A Minecraft mod for 1.19.4 that aimed to extend the base game's progression system by introducing new tiers of items found across different dimensions based on the planets in our solar system.",
+            "link" : null
         }
     ]
 }
