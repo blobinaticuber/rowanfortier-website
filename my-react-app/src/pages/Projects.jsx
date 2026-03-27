@@ -44,9 +44,9 @@ export function Projects() {
     return (
         <>
             <h1>Projects</h1>
-            <input onChange={searchUpdate} type="text" placeholder="Search..."></input>
+            <input onInput={searchUpdate} type="text" placeholder="Search..."></input>
                 <div className="grid">
-                {filteredData.map((projects) => (
+                {filteredData.length>0 ? filteredData.map((projects) => (
                     <Card key={projects.key} link={projects.link} color={projects.color}>
                         <div className="vstack">
                             <ImageShape shape={projects.image.shape} path={projects.image.path}/>
@@ -54,7 +54,7 @@ export function Projects() {
                             <p>{projects.description}</p>
                         </div>
                     </Card>
-                ))}
+                )) : <p>no results for that search :(</p>}
                 </div>
 
             <Footer/>
