@@ -18,7 +18,7 @@ export function Footer() {
                     <a href="https://www.youtube.com/@RowanFortier" target="_blank">
                         <FaYoutube />
                     </a>
-                    <small>© 2026 Rowan Fortier</small>
+                    <p className="footerText">© 2026 Rowan Fortier</p>
                 </div>
             </Card>
         </footer>
