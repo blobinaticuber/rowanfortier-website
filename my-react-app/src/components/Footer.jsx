@@ -18,7 +18,7 @@ export function Footer() {
                     <a href="https://www.youtube.com/@RowanFortier" target="_blank">
                         <FaYoutube />
                     </a>
-                    <p>© 2026 Rowan Fortier</p>
+                    <small>© 2026 Rowan Fortier</small>
                 </div>
             </Card>
         </footer>

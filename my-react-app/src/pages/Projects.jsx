@@ -44,7 +44,7 @@ export function Projects() {
     return (
         <>
             <h1>Projects</h1>
-            <input onInput={searchUpdate} type="text" placeholder="Search..."></input>
+            <input onKeyDown={searchUpdate} onInput={searchUpdate} type="text" placeholder="Search..."></input>
                 <div className="grid">
                 {filteredData.length>0 ? filteredData.map((projects) => (
                     <Card key={projects.key} link={projects.link} color={projects.color}>
