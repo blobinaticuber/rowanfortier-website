@@ -1,7 +1,15 @@
 .grid3 {
     display: grid;
     gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.service{
+    filter: drop-shadow(0 0 2em #ff0000);
+}
+
+.service:hover {
+    filter: drop-shadow(0 0 2em #ffffff);
 }
 
 @media (max-width: 700px) {
