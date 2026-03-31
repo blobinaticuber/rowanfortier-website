@@ -2,6 +2,12 @@ import { Card } from "../components/Card"
 import { ServiceCard } from "../components/ServiceCard";
 import { Footer } from "../components/Footer"
 
+import { FaLock } from "react-icons/fa6";
+import { FaMobileScreenButton } from "react-icons/fa6";
+import { TbRobotOff } from "react-icons/tb";
+import { FaCheck } from "react-icons/fa";
+import { ImCross } from "react-icons/im";
+
 import './Services.css';
 
 export function Services() {
@@ -12,23 +18,34 @@ export function Services() {
 
         <div className="grid2">
 
-            <ServiceCard color={"var(--green)"}>
+            <ServiceCard color={"var(--purple)"}>
                 <h2>Basic</h2>
-                <ul>
-                    <li>1-3 page website</li>
-                    <li>6 months of support</li>
-                </ul>
-                <h2 className="price">CAD $149.99</h2>
+                <div className="service-grid">
+                    <p>1-3 page website</p>
+                    <FaCheck />
+                    <p>6 months of support</p>
+                    <FaCheck />
+                    <p>Custom domain</p>
+                    <FaCheck />
+                    <p>Google Ads support</p>
+                    <ImCross />
+                </div>
+                <h2 className="price">CAD $174.99</h2>
             </ServiceCard>
 
-            <ServiceCard color={"var(--blue)"}>
+            <ServiceCard color={"var(--purple)"}>
                 <h2>Advanced</h2>
-                <ul>
-                    <li>3-5 page website</li>
-                    <li>Lifetime support</li>
-                    <li>Run Google ads and earn revenue</li>
-                </ul>
-                <h2 className="price">CAD $249.99</h2>
+                <div className="service-grid">
+                    <p>3-5 page website</p>
+                    <FaCheck />
+                    <p>Lifetime support</p>
+                    <FaCheck />
+                    <p>Custom domain</p>
+                    <FaCheck />
+                    <p>Google Ads support</p>
+                    <FaCheck />
+                </div>
+                <h2 className="price">CAD $324.99</h2>
             </ServiceCard>
 
         </div>
@@ -38,20 +55,23 @@ export function Services() {
 
             <Card color={"var(--gray)"}>
                 <div className="vstack">
+                    <FaMobileScreenButton />
                     <h3>Responsive</h3>
-                    <p>I work to make sure the site looks great on all devices.</p>
+                    <p>The website will look amazing on all devices, whether that's a tablet, phone, or computer.</p>
                 </div>
             </Card>
 
             <Card color={"var(--gray)"}>
                 <div className="vstack">
-                    <h3>Security</h3>
-                    <p>Site is not able to be hacked due to its simplicity. No database leaks</p>
+                    <FaLock />
+                    <h3>Secure</h3>
+                    <p>Site is not able to be hacked due to its simplicity. No database leaks or security issues.</p>
                 </div>
             </Card>
 
             <Card color={"var(--gray)"}>
                 <div className="vstack">
+                    <TbRobotOff />
                     <h3>No AI slop</h3>
                     <p>Hand-written code by a passionate web developer gives character to your website in a world of slop.</p>
                 </div>

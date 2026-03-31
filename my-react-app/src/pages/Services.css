@@ -10,6 +10,23 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.service-grid {
+    display: grid;
+    /* gap: 1rem; */
+    grid-template-columns: 4fr 1fr;
+    margin: 0.5em;
+}
+
+.service-grid p {
+    margin: 0.25em;
+    text-align: left;
+}
+
+.service-grid svg {
+    height: 1em;
+    align-self: center;
+}
+
 .service{
     filter: drop-shadow(0 0 2em #ff0000);
 }
