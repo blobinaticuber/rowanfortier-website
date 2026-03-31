@@ -102,9 +102,15 @@ button:focus-visible {
     align-items: center;
   }
 
+  .vstack {
+    padding: 0;
+    width: calc(100% - 0.1em);
+  }
+
 }
 
 .vstack {
+  width: calc(100% - 1em);
   padding: 1em;
   display: flex;
   flex-direction: column;

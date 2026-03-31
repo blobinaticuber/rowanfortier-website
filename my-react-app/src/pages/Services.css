@@ -1,7 +1,13 @@
-.grid3 {
+.grid2 {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
+}
+
+.grid3 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .service{
@@ -13,7 +19,7 @@
 }
 
 @media (max-width: 700px) {
-    .grid3 {
+    .grid3, .grid2 {
         grid-template-columns: 1fr;
     }
 }
