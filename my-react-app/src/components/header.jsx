@@ -7,8 +7,7 @@ export function Header() {
             <div className="nav">
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/projects">Projects</NavLink>
-                {/* <a className="active" href="index.html">Home</a> */}
-                {/* <a href="programming.html">Projects</a> */}
+                <NavLink to="/services">Services</NavLink>
             </div>
         </div>
     )

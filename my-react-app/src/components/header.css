@@ -14,10 +14,10 @@
 /* Style the links inside the navigation bar */
 .topnav .nav a {
   float: left;
-  background-color: var(--purple);
+  background-color: var(--blue);
   color: var(--padborder-color);
   text-align: center;
-  padding: 16px;
+  padding: 0.5em;
   text-decoration: none;
   font-size: 17px;
   border-radius: 1em;
@@ -37,7 +37,7 @@
 
 /* Add a color to the active/current link */
 .topnav .nav a.active {
-  background-color: var(--blue);
+  background-color: var(--purple);
   color: var(--padborder-color);
 }
 
