@@ -11,8 +11,26 @@
   padding: 8px;
 }
 
+.linkText {
+  display: block;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .linkText {
+    display: none;
+  }
+
+  .topnav svg {
+    height: 2em;
+    width: 2em;
+  }
+}
+
 /* Style the links inside the navigation bar */
 .topnav .nav a {
+  display: flex;
+  align-items: center;
   float: left;
   background-color: var(--blue);
   color: var(--padborder-color);
@@ -41,10 +59,10 @@
   color: var(--padborder-color);
 }
 
-.topnav .nav a.visited {
-  color: white;
-}
-
-.topnav .nav a span {
-  vertical-align: top;
+.topnav svg {
+  color: var(--padborder-color);
+  height: 1em;
+  width: 1em;
+  vertical-align: middle;
+  padding: 0.2em;
 }
