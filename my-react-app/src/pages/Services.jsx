@@ -18,7 +18,7 @@ export function Services() {
 
         <div className="grid2">
 
-            <ServiceCard color={"var(--purple)"}>
+            <ServiceCard color={"var(--green)"}>
                 <h2>Basic</h2>
                 <div className="service-grid">
                     <p>1-3 page website</p>
@@ -37,7 +37,7 @@ export function Services() {
 
             </ServiceCard>
 
-            <ServiceCard color={"var(--purple)"}>
+            <ServiceCard color={"var(--green)"}>
                 <h2>Advanced</h2>
                 <div className="service-grid">
                     <p>3-5 page website</p>
