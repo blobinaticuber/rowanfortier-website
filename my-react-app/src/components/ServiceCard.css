@@ -26,8 +26,11 @@
 }
 
 .price{
+    display: flex;
+    gap: 0.5em;
     margin-top: auto;
     background-color: var(--bg-color);
     border-radius: 0.5em;
     padding: 0 1rem 0 1rem;
+    align-items: center;
 }

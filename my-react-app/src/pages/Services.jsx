@@ -30,7 +30,11 @@ export function Services() {
                     <p>Google Ads support</p>
                     <ImCross />
                 </div>
-                <h2 className="price">CAD $174.99</h2>
+                <div className="price">
+                    <h2>CAD $174.99</h2>
+                    <p>monthly</p>
+                </div>
+
             </ServiceCard>
 
             <ServiceCard color={"var(--purple)"}>
@@ -45,7 +49,10 @@ export function Services() {
                     <p>Google Ads support</p>
                     <FaCheck />
                 </div>
-                <h2 className="price">CAD $324.99</h2>
+                <div className="price">
+                    <h2>CAD $324.99</h2>
+                    <p>monthly</p>
+                </div>
             </ServiceCard>
 
         </div>
