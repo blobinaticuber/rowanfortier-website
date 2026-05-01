@@ -38,6 +38,10 @@
     background: var(--gray);
 }
 
+.filter-dropdown-open p.selected {
+    background: var(--purple);
+}
+
 .filter-dropdown {
     display: none;
 }
@@ -77,6 +81,7 @@
 }
 
 input {
+    flex: 1;
     width: max(200px, 40%);
     height: 2em;
     border-radius: 0.75em;

@@ -16,6 +16,16 @@ export function Projects() {
 
     const [filterOpen, setFilterOpen] = useState(false);
 
+    const [filterIndex, setFilterIndex] = useState(-1);
+
+    let categoriesList = [
+        {id: 0, category: "Website"},
+        {id: 1, category: "Hackathon"},
+        {id: 2, category: "Browser extension"},
+        {id: 3, category: "Program"},
+        {id: 4, category: "Mod"}
+    ]
+
     useEffect(() => {
         fetch('projects.json')
         .then(response => {
@@ -38,6 +48,10 @@ export function Projects() {
         setFilteredData(data.filter((project) => (project.description.toUpperCase().includes(search.toUpperCase()))));
     }
 
+    function filterData(category) {
+        setFilteredData(data.filter((project) => (project.categories.includes(category))));
+    }
+
     if (loading) return (
         <>
         <h1>Projects</h1>
@@ -46,17 +60,32 @@ export function Projects() {
         </>
     )
 
+    function handleFilterClick(index, category) {
+        // if they clicked on it again
+
+        if (filterIndex == index) {
+            setFilteredData(data)
+            setFilterIndex(-1)
+        } else if (filterIndex == -1){
+            filterData(category)
+            setFilterIndex(index)
+        } else {
+            filterData(category)
+            setFilterIndex(index)
+        }
+        setFilterOpen(false)
+
+    }
+
     return (
         <>
             <h1>Projects</h1>
             <div className="controls">
-                <button className="filter-button" onClick={()=> setFilterOpen(!filterOpen)}><FaFilter /> Filter</button>
+                <button className="filter-button" onClick={()=> setFilterOpen(!filterOpen)}><FaFilter /> {filterIndex==-1?"Filter":categoriesList[filterIndex].category}</button>
                 <div className={ filterOpen ? "filter-dropdown-open" : "filter-dropdown"}>
-                    <p>Website ({data.filter(c => c.categories.includes("Website")).length})</p>
-                    <p>Hackathon ({data.filter(c => c.categories.includes("Hackathon")).length})</p>
-                    <p>Browser extension ({data.filter(c => c.categories.includes("Browser extension")).length})</p>
-                    <p>Program ({data.filter(c => c.categories.includes("Program")).length})</p>
-                    <p>Mod ({data.filter(c => c.categories.includes("Mod")).length})</p>
+                    {categoriesList.map((item) => (
+                        <p className={filterIndex==item.id ? "selected" : ""} key={item.id} onClick={()=>handleFilterClick(item.id, item.category)}>{item.category} ({data.filter(c => c.categories.includes(item.category)).length})</p>
+                    ))}
                 </div>
                 <input onKeyDown={searchUpdate} onInput={searchUpdate} type="text" placeholder="Search..."></input>
             </div>
