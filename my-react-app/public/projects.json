@@ -48,7 +48,7 @@
                 "path" : "/projects/processing-3x3x3.png"
             },
             "title" : "3x3x3 Simulator",
-            "description" : "My first ever functioning Rubik's Cube simulator program without spaghetti code! It uses linear algebra to keep track of the puzzle state and draw the graphics. There are keybinds for twists and rotations, as well as mouse controls to view the puzzle from different angles.",
+            "description" : "A Rubik's Cube simulator program that uses linear algebra to keep track of the puzzle state and draw the graphics. There are keybinds for twists and rotations, as well as mouse controls to view the puzzle from different angles.",
             "link" : "https://github.com/blobinaticuber/3x3x3-simulator",
             "categories" : ["Program"],
             "created" : "2024-04-03"
@@ -74,7 +74,7 @@
                 "path" : "/projects/decimaltime.svg"
             },
             "title" : "Decimal Time",
-            "description" : "A website that explores an alternative method of telling the time of day.",
+            "description" : "A website that explores a different way to tell time. Decimal time is a system of time measurement in which time units are related by factors of ten. The day is divided into 10 decimal hours (each having 100 decimal minutes (each having 100 decimal seconds)).",
             "link" : "https://decimaltime.rowanfortier.com/",
             "categories" : ["Website"],
             "created" : "2026-04-16"
