@@ -21,6 +21,7 @@
   --pink: #FF69B4;
   --gray: #222222;
   --green: #14a900;
+  --red: #aa0000;
 }
 
 #root {
@@ -71,6 +72,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
+    /* light mode colour vars */
     --bg-color: #ffffff;
     --padborder-color: #000000;
     --yellow: #FFDB58;
@@ -79,6 +81,7 @@ button:focus-visible {
     --pink: #FFB2EF;
     --gray: #AAAAAA;
     --green: #48e12d;
+    --red: #e24141;
   }
   a:hover {
     color: #747bff;

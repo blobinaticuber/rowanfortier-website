@@ -21,6 +21,7 @@ export function Projects() {
             return response.json();
         })
         .then(data => {
+            data.projects.sort((a,b) => new Date(b.created) - new Date(a.created))
             setData(data.projects);
             setFilteredData(data.projects);
             setLoading(false);
