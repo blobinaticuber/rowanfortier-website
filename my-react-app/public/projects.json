@@ -10,7 +10,7 @@
             "title" : "Hello, Stars!",
             "description" : "First place winning project of the 2025 Girls in Tech Hackathon. Hello, Stars! is a gamified platform to learn about stargazing - complete with user accounts, image recognition, database integration, and more.",
             "link" : null,
-            "categories" : ["School"]
+            "categories" : ["Website", "Hackathon"]
         },
 
         {
@@ -21,7 +21,8 @@
             },
             "title" : "Canvas Connect",
             "description" : "First place winning project of the C^2 Hacks 2025 hackathon. Canvas Connect is a browser extension that adds new ways to discover clubs, school events, and group chats with classmates directly in Canvas!",
-            "link" : null
+            "link" : null,
+            "categories" : ["Browser extension", "Hackathon"]
         },
 
         {
@@ -32,7 +33,8 @@
             },
             "title" : "Hypercubing.xyz",
             "description" : "A wiki and leaderboard for the hypercubing community. I worked on the content and organization for many of the pages, as well as the frontend of the new leaderboard and verifying submissions.",
-            "link" : "https://hypercubing.xyz/"
+            "link" : "https://hypercubing.xyz/",
+            "categories" : ["Website"]
         },
 
         {
@@ -44,7 +46,8 @@
             },
             "title" : "3x3x3 Simulator",
             "description" : "My first ever functioning Rubik's Cube simulator program without spaghetti code! It uses linear algebra to keep track of the puzzle state and draw the graphics. There are keybinds for twists and rotations, as well as mouse controls to view the puzzle from different angles.",
-            "link" : "https://github.com/blobinaticuber/3x3x3-simulator"
+            "link" : "https://github.com/blobinaticuber/3x3x3-simulator",
+            "categories" : ["Program"]
         },
         {
             "key" : 5,
@@ -55,7 +58,8 @@
             },
             "title" : "Stella Magnus",
             "description" : "A Minecraft mod for 1.19.4 that aimed to extend the base game's progression system by introducing new tiers of items found across different dimensions based on the planets in our solar system.",
-            "link" : null
+            "link" : null,
+            "categories" : ["Mod"]
         }
     ]
 }

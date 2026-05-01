@@ -51,6 +51,11 @@ export function Projects() {
                         <div className="vstack">
                             <ImageShape shape={projects.image.shape} path={projects.image.path}/>
                             <h2>{projects.title}</h2>
+                            <div className="pillbox">
+                                {projects.categories.map((item, index) => (
+                                    <p key={index}>{item}</p>
+                                ))}
+                            </div>
                             <p>{projects.description}</p>
                         </div>
                     </Card>
