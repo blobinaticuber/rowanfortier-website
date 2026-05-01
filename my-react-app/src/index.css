@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #000000;
+  background-color: var(--bg-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,12 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* dark mode color vars */
+  --bg-color: #000000;
   --padborder-color: #FFFFFF;
-  --yellow: #E3A018;
+  --yellow: #b17f00;
   --blue: #3300FF;
   --purple: #330088;
   --pink: #FF69B4;
   --gray: #222222;
+  --green: #14a900;
 }
 
 #root {
@@ -69,13 +71,14 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    background-color: #ffffff;
+    --bg-color: #ffffff;
     --padborder-color: #000000;
     --yellow: #FFDB58;
     --blue: #69D2E7;
     --purple: #C4A1FF;
     --pink: #FFB2EF;
     --gray: #AAAAAA;
+    --green: #48e12d;
   }
   a:hover {
     color: #747bff;
@@ -99,9 +102,15 @@ button:focus-visible {
     align-items: center;
   }
 
+  .vstack {
+    padding: 0;
+    width: calc(100% - 0.1em);
+  }
+
 }
 
 .vstack {
+  width: calc(100% - 1em);
   padding: 1em;
   display: flex;
   flex-direction: column;
