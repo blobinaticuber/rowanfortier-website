@@ -47,16 +47,16 @@ export function Projects() {
             <input onKeyDown={searchUpdate} onInput={searchUpdate} type="text" placeholder="Search..."></input>
                 <div className="grid">
                 {filteredData.length>0 ? filteredData.map((projects) => (
-                    <Card key={projects.key} link={projects.link} color={projects.color}>
+                    <Card className="project-card" key={projects.key} link={projects.link} color={projects.color}>
                         <div className="vstack">
                             <ImageShape shape={projects.image.shape} path={projects.image.path}/>
-                            <h2>{projects.title}</h2>
+                            <h2 className="project-card-h2">{projects.title}</h2>
                             <div className="pillbox">
                                 {projects.categories.map((item, index) => (
                                     <p key={index}>{item}</p>
                                 ))}
                             </div>
-                            <p>{projects.description}</p>
+                            <p className="desc">{projects.description}</p>
                         </div>
                     </Card>
                 )) : <p>no results for that search :(</p>}

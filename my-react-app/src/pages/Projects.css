@@ -10,6 +10,17 @@
     }
 }
 
+.project-card-h2 {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.desc {
+    text-align: left;
+    margin-top: 0;
+}
+
 input {
     width: max(200px, 40%);
     height: 2em;
