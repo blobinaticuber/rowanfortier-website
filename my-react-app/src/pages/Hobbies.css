@@ -1,0 +1,17 @@
+details {
+    color: var(--text-color);
+
+}
+
+details summary {
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    /* flex-grow: 1; */
+}
+
+.hobbies-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

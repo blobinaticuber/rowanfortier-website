@@ -16,6 +16,7 @@
   --bg-color: #151515;
   --padborder-color: #000000;
   --icon-color: #ffffff;
+  --text-color: #ffffff;
   --yellow: #b17f00;
   --blue: #3300FF;
   --purple: #330088;
@@ -70,6 +71,7 @@ h1 {
     --bg-color: #ffffff;
     --padborder-color: #000000;
     --icon-color: #000000;
+    --text-color: #000000;
     --yellow: #FFDB58;
     --blue: #69D2E7;
     --purple: #C4A1FF;
