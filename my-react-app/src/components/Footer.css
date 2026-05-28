@@ -21,7 +21,7 @@ footer {
 }
 
 svg {
-    color: var(--padborder-color);
+    color: var(--icon-color);
     height: 2em;
     width: 2em;
     vertical-align: bottom;

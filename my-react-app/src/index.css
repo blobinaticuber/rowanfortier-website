@@ -13,8 +13,9 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* dark mode color vars */
-  --bg-color: #000000;
-  --padborder-color: #FFFFFF;
+  --bg-color: #151515;
+  --padborder-color: #000000;
+  --icon-color: #ffffff;
   --yellow: #b17f00;
   --blue: #3300FF;
   --purple: #330088;
@@ -75,6 +76,7 @@ button:focus-visible {
     /* light mode colour vars */
     --bg-color: #ffffff;
     --padborder-color: #000000;
+    --icon-color: #000000;
     --yellow: #FFDB58;
     --blue: #69D2E7;
     --purple: #C4A1FF;

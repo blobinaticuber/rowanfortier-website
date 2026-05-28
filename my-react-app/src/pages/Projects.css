@@ -62,7 +62,7 @@
 }
 
 .controls svg {
-    color: var(--padborder-color);
+    color: var(--icon-color);
     height: 1em;
     width: 1em;
     vertical-align: middle;

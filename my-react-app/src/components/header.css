@@ -33,7 +33,7 @@
   align-items: center;
   float: left;
   background-color: var(--blue);
-  color: var(--padborder-color);
+  color: var(--icon-color);
   text-align: center;
   padding: 0.5em;
   text-decoration: none;
@@ -56,11 +56,11 @@
 /* Add a color to the active/current link */
 .topnav .nav a.active {
   background-color: var(--purple);
-  color: var(--padborder-color);
+  color: var(--icon-color);
 }
 
 .topnav svg {
-  color: var(--padborder-color);
+  color: var(--icon-color);
   height: 1em;
   width: 1em;
   vertical-align: middle;
