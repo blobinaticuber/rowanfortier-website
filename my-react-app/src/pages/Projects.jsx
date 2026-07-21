@@ -1,5 +1,5 @@
 import { Footer } from "../components/Footer"
-import { Card } from "../components/Card"
+import { Card } from "@/components/ui/card"
 import './Projects.css'
 import { ImageShape } from "../components/ImageShape"
 
