@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Footer } from '../components/Footer'
 import { BoxedLink } from '../components/BoxedLink'
 import { ImageCard} from '../components/ui/image-card'
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa'
 
 export function Home() {
     return (
@@ -11,7 +11,7 @@ export function Home() {
                 <ImageCard
                     caption="Rowan Fortier"
                     imageUrl='/rowan.png'
-                    className="w-1/3"
+                    className="w-full md:w-1/3"
                 />
 
                 <Card>
@@ -24,14 +24,43 @@ export function Home() {
                 </Card>
             </div>
 
-            <BoxedLink
-                url="https://github.com/blobinaticuber"
-                name="GitHub"
-                handle="@blobinaticuber"
-                icon={<FaGithub/>}
-            />
+            <div className="flex flex-col md:flex-row justify-between gap-6">
+                <a href="https://www.youtube.com/watch?v=QTc-rG-nunA" target="_blank">
+                    <ImageCard
+                        caption="I am so proud of this video... please give it a watch"
+                        imageUrl='https://img.youtube.com/vi/QTc-rG-nunA/maxresdefault.jpg'
+                        className="w-full pr"
+                    />
+                </a>
 
-            <Footer/>
+                <div className="flex flex-col justify-between items-end gap-4">
+                    <BoxedLink
+                        url="https://github.com/blobinaticuber"
+                        name="GitHub"
+                        handle="@blobinaticuber"
+                        icon={<FaGithub/>}
+                    />
+
+                    <BoxedLink
+                        url="https://www.linkedin.com/in/rowan-fortier-b53261354/"
+                        name="LinkedIn"
+                        handle="Rowan Fortier"
+                        icon={<FaLinkedin/>}
+                    />
+
+                    <BoxedLink
+                        url="https://www.youtube.com/@RowanFortier"
+                        name="YouTube"
+                        handle="@rowanfortier"
+                        icon={<FaYoutube/>}
+                    />
+                </div>
+
+            </div>
+
+
+
+
         </>
     )
 }

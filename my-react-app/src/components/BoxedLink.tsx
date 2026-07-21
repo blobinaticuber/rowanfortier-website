@@ -9,8 +9,8 @@ type LinkProps = {
 
 function BoxedLink(link: LinkProps) {
     return (
-        <Card className="w-fit">
-            <a href={link.url} target="_blank">
+        <a href={link.url} target="_blank">
+            <Card className="min-w-xs">
                 <CardContent className="hover:underline">
                     {link.icon}
                     <p className="font-heading mt-3 text-lg sm:text-xl">
@@ -20,9 +20,10 @@ function BoxedLink(link: LinkProps) {
                         {link.handle}
                     </p>
                 </CardContent>
-            </a>
+            </Card>
+        </a>
 
-        </Card>
+
     )
 }
 
