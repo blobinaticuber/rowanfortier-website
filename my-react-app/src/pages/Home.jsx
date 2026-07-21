@@ -1,12 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Footer } from '../components/Footer'
-import { ImageShape } from '../components/ImageShape'
+import { BoxedLink } from '../components/BoxedLink'
 import { ImageCard} from '../components/ui/image-card'
+import { FaGithub } from 'react-icons/fa'
 
 export function Home() {
     return (
         <>
-            <div className="flex flex-col gap-4 md:flex-row">
+            <div className="flex flex-col gap-4 md:flex-row pb-4">
                 <ImageCard
                     caption="Rowan Fortier"
                     imageUrl='/rowan.png'
@@ -22,6 +23,13 @@ export function Home() {
                     </CardContent>
                 </Card>
             </div>
+
+            <BoxedLink
+                url="https://github.com/blobinaticuber"
+                name="GitHub"
+                handle="@blobinaticuber"
+                icon={<FaGithub/>}
+            />
 
             <Footer/>
         </>

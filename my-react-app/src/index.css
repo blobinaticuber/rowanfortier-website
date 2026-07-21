@@ -25,7 +25,7 @@
   :root {
     --background: oklch(22.71% 0.0252 182.05);
     --secondary-background: oklch(23.93% 0 0);
-    --foreground: oklch(92.49% 0 0);
+    --foreground: oklch(0% 0 0);
     --main-foreground: oklch(0% 0 0);
     --main: oklch(70.54% 0.1525 162.97);
     --border: oklch(0% 0 0);
