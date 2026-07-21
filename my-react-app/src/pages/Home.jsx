@@ -33,7 +33,7 @@ export function Home() {
                     />
                 </a>
 
-                <div className="flex flex-col justify-between items-end gap-4">
+                <div className="flex flex-col justify-between gap-4">
                     <BoxedLink
                         url="https://github.com/blobinaticuber"
                         name="GitHub"

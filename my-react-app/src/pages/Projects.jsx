@@ -1,11 +1,13 @@
 import { Footer } from "../components/Footer"
 import { Card } from "@/components/ui/card"
-import './Projects.css'
+import { Badge } from "@/components/ui/badge"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { ImageShape } from "../components/ImageShape"
 
 import { FaFilter } from "react-icons/fa6";
 
 import {useState, useEffect} from 'react';
+import { CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 
 export function Projects() {
 
@@ -79,8 +81,7 @@ export function Projects() {
 
     return (
         <>
-            <h1>Projects</h1>
-            <div className="controls">
+            {/* <div className="controls">
                 <button className="filter-button" onClick={()=> setFilterOpen(!filterOpen)}><FaFilter /> {filterIndex==-1?"Filter":categoriesList[filterIndex].category}</button>
                 <div className={ filterOpen ? "filter-dropdown-open" : "filter-dropdown"}>
                     {categoriesList.map((item) => (
@@ -88,26 +89,34 @@ export function Projects() {
                     ))}
                 </div>
                 <input onKeyDown={searchUpdate} onInput={searchUpdate} type="text" placeholder="Search..."></input>
-            </div>
+            </div> */}
+                <div className="flex flex-col h-[calc(100vh-9rem)]">
+                    <ScrollArea>
+                        <div className="flex flex-col gap-4">
+                        {filteredData.length>0 ? filteredData.map((projects) => (
+                            <Card key={projects.key} link={projects.link} color={projects.color}>
+                                <CardHeader>
+                                    <CardTitle>{projects.title}</CardTitle>
+                                    <CardDescription>{projects.description}</CardDescription>
+                                </CardHeader>
+                                <CardContent>
+                                    <div className="vstack">
+                                        <ImageShape shape={projects.image.shape} path={projects.image.path}/>
 
-                <div className="grid">
-                {filteredData.length>0 ? filteredData.map((projects) => (
-                    <Card className="project-card" key={projects.key} link={projects.link} color={projects.color}>
-                        <div className="vstack">
-                            <ImageShape shape={projects.image.shape} path={projects.image.path}/>
-                            <h2 className="project-card-h2">{projects.title}</h2>
-                            <div className="pillbox">
-                                {projects.categories.map((item, index) => (
-                                    <p key={index}>{item}</p>
-                                ))}
-                            </div>
-                            <p className="desc">{projects.description}</p>
+                                        <div className="flex flex-row gap-4">
+                                            {projects.categories.map((item, index) => (
+                                                <Badge variant="accent" key={index}>{item}</Badge>
+                                            ))}
+                                        </div>
+
+                                    </div>
+                                </CardContent>
+
+                            </Card>
+                        )) : <p>no results for that search :(</p>}
                         </div>
-                    </Card>
-                )) : <p>no results for that search :(</p>}
+                    </ScrollArea>
                 </div>
-
-            <Footer/>
         </>
     )
 }
