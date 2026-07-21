@@ -10,7 +10,6 @@ export function Header() {
             <div className="nav">
                 <NavLink to="/"><ImHome3/><p className="linkText">Home</p></NavLink>
                 <NavLink to="/projects"><PiSquaresFourFill /><p className="linkText">Projects</p></NavLink>
-                <NavLink to="/services"><MdOutlineWeb/><p className="linkText">Services</p></NavLink>
             </div>
         </div>
     )
