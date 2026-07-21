@@ -13,12 +13,12 @@ export function Header() {
             <NavigationMenu className="w-full">
                 <NavigationMenuList>
                         <NavigationMenuItem>
-                            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                            <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/" ? "bg-accent" : ""}`}>
                                 <NavLink to="/">About</NavLink>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                        <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/projects" ? "bg-accent" : ""}`}>
                             <NavLink to="/projects">Projects</NavLink>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
