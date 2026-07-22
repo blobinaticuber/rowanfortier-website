@@ -84,34 +84,8 @@ export function Projects() {
                                 </div>
                                 <p>{projects.description}</p>
                             </CardContent>
-                            <CardFooter className="border-t-4">
-                                    <Button variant="destructive">test</Button>
-                                    <Button variant="outline">test</Button>
-                                    <Button variant="secondary">test</Button>
-                                    <Button variant="ghost">test</Button>
-
-                            </CardFooter>
                         </Card>
-                        // <Card key={projects.key} link={projects.link} color={projects.color}>
-                        //     <CardHeader>
-                        //         <CardTitle>{projects.title}</CardTitle>
-                        //         <CardDescription>{projects.description}</CardDescription>
-                        //     </CardHeader>
-                        //     <CardContent>
-                        //         <div className="vstack">
-                        //             <ImageShape shape={projects.image.shape} path={projects.image.path}/>
-
-                        //             <div className="flex flex-row gap-4">
-                        //                 {projects.categories.map((item, index) => (
-                        //                     <Badge variant="accent" key={index}>{item}</Badge>
-                        //                 ))}
-                        //             </div>
-
-                        //         </div>
-                        //     </CardContent>
-
-                        // </Card>
-                    )) : <p>no results for that search :(</p>}
+                    )) : <p>No projects found</p>}
                     </div>
                 </ScrollArea>
             </div>
