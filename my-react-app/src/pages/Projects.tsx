@@ -42,23 +42,26 @@ export function Projects() {
             return response.json();
         })
         .then(data => {
-            // data.projects.sort((a,b) => new Date(b.created) - new Date(a.created))
-            setData(data.projects as project[]);
+            setData((data.projects as project[]).sort((a,b) => a.key - b.key))
             setLoading(false);
         })
 
     }, [])
 
+
+
     if (loading) return (
         <>
         <Card>
+            <CardHeader>
+                <Skeleton className="h-6 w-1/4"/>
+            </CardHeader>
             <CardContent className="flex flex-col gap-4">
                 <div className="flex justify-center">
                     <Skeleton
                     className="w-full md:w-2/3 aspect-video"
                     />
                 </div>
-                <Skeleton className="h-6 w-1/4"/>
                 <Skeleton className="h-4 w-full"/>
             </CardContent>
         </Card>
@@ -71,7 +74,7 @@ export function Projects() {
                 <ScrollArea>
                     <div className="flex flex-col gap-4 p-4">
                     {data.length>0 ? data.map((project) => (
-                        <Card>
+                        <Card key={project.key}>
                             <CardHeader className="flex flex-col md:flex-row md:justify-between">
                                 <CardTitle className="text-2xl">{project.title}</CardTitle>
                             {project.links && project.links.length>0 ?

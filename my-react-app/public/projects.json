@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "key" : 1,
+            "key" : 4,
             "image" : {
                 "shape" : "circle",
                 "path" : "/projects/hellostars.png"
@@ -24,7 +24,7 @@
         },
 
         {
-            "key" : 2,
+            "key" : 3,
             "image" : {
                 "path" : "/projects/canvasconnect.png"
             },
@@ -41,7 +41,7 @@
         },
 
         {
-            "key" : 3,
+            "key" : 2,
             "image" : {
                 "path" : "/projects/hypercubingxyz.png"
             },
@@ -62,7 +62,7 @@
         },
 
         {
-            "key" : 4,
+            "key" : 6,
             "image" : {
                 "shape": "squircle",
                 "path" : "/projects/processing-3x3x3.png"
@@ -96,7 +96,7 @@
             "created" : "2023-03-29"
         },
         {
-            "key" : 6,
+            "key" : 1,
             "image" : {
                 "shape": "squircle",
                 "path" : "/projects/decimaltime.png"
