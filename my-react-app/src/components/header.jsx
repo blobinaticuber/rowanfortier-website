@@ -1,17 +1,29 @@
-import './header.css'
-import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, NavLink, useLocation } from 'react-router-dom';
 import { ImHome3 } from "react-icons/im";
 import { MdOutlineWeb } from "react-icons/md";
 import { PiSquaresFourFill } from "react-icons/pi";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from "../components/ui/navigation-menu"
+import { Button } from '../components/ui/button'
 
 export function Header() {
+    const location = useLocation()
+
     return (
-        <div className="topnav">
-            <div className="nav">
-                <NavLink to="/"><ImHome3/><p className="linkText">Home</p></NavLink>
-                <NavLink to="/projects"><PiSquaresFourFill /><p className="linkText">Projects</p></NavLink>
-                <NavLink to="/services"><MdOutlineWeb/><p className="linkText">Services</p></NavLink>
-            </div>
+        <div className="pb-4 flex justify-center">
+            <NavigationMenu className="w-full">
+                <NavigationMenuList>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/" ? "bg-accent" : ""}`}>
+                                <NavLink to="/">About</NavLink>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/projects" ? "bg-accent" : ""}`}>
+                            <NavLink to="/projects">Projects</NavLink>
+                        </NavigationMenuLink>
+                    </NavigationMenuItem>
+                </NavigationMenuList>
+            </NavigationMenu>
         </div>
     )
 }
