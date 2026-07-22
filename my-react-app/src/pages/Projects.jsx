@@ -2,11 +2,14 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { ImageShape } from "../components/ImageShape"
+import { Skeleton } from '@/components/ui/skeleton'
+import { Button } from '@/components/ui/button'
+
 
 import { FaFilter } from "react-icons/fa6";
 
 import {useState, useEffect} from 'react';
-import { CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
+import { CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/ui/card";
 
 export function Projects() {
 
@@ -39,8 +42,17 @@ export function Projects() {
 
     if (loading) return (
         <>
-        <h1>Projects</h1>
-        <p>Loading...</p>
+        <Card>
+            <CardContent className="flex flex-col gap-4">
+                <div className="flex justify-center">
+                    <Skeleton
+                    className="w-full md:w-2/3 aspect-video"
+                    />
+                </div>
+                <Skeleton className="h-6 w-1/4"/>
+                <Skeleton className="h-4 w-full"/>
+            </CardContent>
+        </Card>
         </>
     )
 
@@ -50,25 +62,55 @@ export function Projects() {
                 <ScrollArea>
                     <div className="flex flex-col gap-4 p-4">
                     {data.length>0 ? data.map((projects) => (
-                        <Card key={projects.key} link={projects.link} color={projects.color}>
+                        <Card>
                             <CardHeader>
-                                <CardTitle>{projects.title}</CardTitle>
-                                <CardDescription>{projects.description}</CardDescription>
+                                <CardAction>
+                                    <Button variant="accent">View on GitHub</Button>
+                                </CardAction>
                             </CardHeader>
-                            <CardContent>
-                                <div className="vstack">
-                                    <ImageShape shape={projects.image.shape} path={projects.image.path}/>
-
-                                    <div className="flex flex-row gap-4">
-                                        {projects.categories.map((item, index) => (
-                                            <Badge variant="accent" key={index}>{item}</Badge>
-                                        ))}
-                                    </div>
-
+                            <CardContent className="flex flex-col gap-4">
+                                <div className="flex justify-center">
+                                    <img
+                                    className="rounded-base w-full md:w-2/3 shadow-shadow border-2"
+                                    src={`${projects.image.path}`}
+                                    alt="name"
+                                    />
                                 </div>
+                                <p className="text-2xl">{projects.title}</p>
+                                <div className="flex gap-2">
+                                    {projects.categories.map((item, index) => (
+                                        <Badge variant="accent" key={index}>{item}</Badge>
+                                    ))}
+                                </div>
+                                <p>{projects.description}</p>
                             </CardContent>
+                            <CardFooter className="border-t-4">
+                                    <Button variant="destructive">test</Button>
+                                    <Button variant="outline">test</Button>
+                                    <Button variant="secondary">test</Button>
+                                    <Button variant="ghost">test</Button>
 
+                            </CardFooter>
                         </Card>
+                        // <Card key={projects.key} link={projects.link} color={projects.color}>
+                        //     <CardHeader>
+                        //         <CardTitle>{projects.title}</CardTitle>
+                        //         <CardDescription>{projects.description}</CardDescription>
+                        //     </CardHeader>
+                        //     <CardContent>
+                        //         <div className="vstack">
+                        //             <ImageShape shape={projects.image.shape} path={projects.image.path}/>
+
+                        //             <div className="flex flex-row gap-4">
+                        //                 {projects.categories.map((item, index) => (
+                        //                     <Badge variant="accent" key={index}>{item}</Badge>
+                        //                 ))}
+                        //             </div>
+
+                        //         </div>
+                        //     </CardContent>
+
+                        // </Card>
                     )) : <p>no results for that search :(</p>}
                     </div>
                 </ScrollArea>

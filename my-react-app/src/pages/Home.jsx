@@ -27,7 +27,7 @@ export function Home() {
             <div className="flex flex-col md:flex-row justify-between gap-6">
                 <a href="https://www.youtube.com/watch?v=QTc-rG-nunA" target="_blank">
                     <ImageCard
-                        caption="I am so proud of this video... please give it a watch"
+                        caption="900K+ views..."
                         imageUrl='https://img.youtube.com/vi/QTc-rG-nunA/maxresdefault.jpg'
                         className="w-full pr"
                     />
