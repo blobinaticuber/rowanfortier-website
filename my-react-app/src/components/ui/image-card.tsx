@@ -15,7 +15,7 @@ function ImageCard({ imageUrl, caption, className }: Props) {
       )}
     >
       <img className="w-full" src={imageUrl} alt="image" />
-      <figcaption className="border-t-2 text-main-foreground border-border p-4">
+      <figcaption className="border-t-2 text-text border-border p-4">
         {caption}
       </figcaption>
     </figure>

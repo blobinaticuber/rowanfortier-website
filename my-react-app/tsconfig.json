@@ -5,6 +5,8 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     // File Layout
     // "rootDir": "./src",
     // "outDir": "./dist",

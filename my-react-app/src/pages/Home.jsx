@@ -19,7 +19,7 @@ export function Home() {
                         <CardTitle>About Me</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>Fourth-year Computer Science student studying at the University of British Columbia. My interests are in web and app development, and a bit of computer graphics and game development. Some personal hobbies/interests I have are photography, astronomy, juggling, and twisty puzzles.</p>
+                        <p>Fourth-year Computer Science student studying at the University of British Columbia. My interests are in web/app development, computer graphics, and game development. Some personal hobbies I have are photography, astronomy, juggling, and twisty puzzles.</p>
                     </CardContent>
                 </Card>
             </div>
@@ -27,7 +27,7 @@ export function Home() {
             <div className="flex flex-col md:flex-row justify-between gap-6">
                 <a href="https://www.youtube.com/watch?v=QTc-rG-nunA" target="_blank">
                     <ImageCard
-                        caption="900K+ views..."
+                        caption="My best YouTube video • 900K+ views"
                         imageUrl='https://img.youtube.com/vi/QTc-rG-nunA/maxresdefault.jpg'
                         className="w-full pr"
                     />
