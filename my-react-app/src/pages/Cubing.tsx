@@ -1,15 +1,15 @@
 import { BoxedLink } from "@/components/BoxedLink.tsx";
-import { Card, CardContent } from "@/components/ui/card.tsx";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card.tsx";
 import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from "@/components/ui/chart.tsx";
 import { ImageCard } from "@/components/ui/image-card.tsx";
-import { FaGithub, FaLinkedin, FaTrophy, FaYoutube } from 'react-icons/fa'
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
+import { FaTrophy } from 'react-icons/fa'
+import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts"
 
 
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--color-text)",
   },
 } satisfies ChartConfig
 
@@ -150,41 +150,79 @@ export function Cubing() {
             </div>
 
             <h2 className="text-xl pt-6 pb-6">Speedsolving</h2>
-            <p>I've competed in 11 official competitions, and spectated at the 2025 World Championships. Check out my <a target="_blank" className="underline text-accent" href="https://www.worldcubeassociation.org/persons/2016FORT03">World Cube Association</a> profile to see my official results and rankings! Below is a graph of my personal best times on the standard 3x3x3 Rubik's Cube.</p>
+            <p>I've competed in 11 official competitions, and spectated at the 2025 World Championships. Check out my <a target="_blank" className="underline text-accent" href="https://www.worldcubeassociation.org/persons/2016FORT03">World Cube Association</a> profile to see my official results and rankings.</p>
 
-            <Card>
-                <ChartContainer config={chartConfig}>
-                    <LineChart
-                        accessibilityLayer
-                        data={chartData}
-                        margin={{
-                        left: 12,
-                        right: 12,
-                        }}
-                    >
-                        <CartesianGrid vertical={false} />
-                        <XAxis
-                        dataKey="x"
-                        tickLine={true}
-                        axisLine={true}
-                        tickMargin={8}
-                        tickFormatter={(value) => value.slice(0, 4)}
-                        />
-                        <ChartTooltip
-                        cursor={false}
-                        content={<ChartTooltipContent hideLabel />}
-                        />
-                        <Line
-                        dataKey="y"
-                        type="step"
-                        stroke="var(--color-desktop)"
-                        strokeWidth={2}
-                        dot={false}
-                        />
+            <Card className="mt-4">
+                <CardHeader>
+                    <CardTitle>3x3x3 personal best (seconds)</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <ChartContainer config={chartConfig}>
+                        <LineChart
+                            accessibilityLayer
+                            data={chartData}
+                            margin={{
+                            left: 12,
+                            right: 12,
+                            }}
+                        >
+                            <CartesianGrid vertical={false} />
+                            <XAxis
+                            dataKey="x"
+                            // scale="time"
+                            // type="number"
+                            tickLine={true}
+                            axisLine={true}
+                            tickMargin={8}
+                            stroke="var(--color-text)"
+                            // tickFormatter={(value) => value.slice(0, 4)}
+                            />
+                            <YAxis
+                            dataKey="y"
+                            stroke="var(--color-text)"
+                            />
+                            <ChartTooltip
+                            cursor={false}
+                            content={<ChartTooltipContent />}
+                            />
+                            <Line
+                            dataKey="y"
+                            type="stepAfter"
+                            stroke="var(--color-accent)"
+                            strokeWidth={2}
+                            dot={{stroke: "var(--color-text)", fill: "var(--color-text)"}}
+                            />
 
-                    </LineChart>
-                </ChartContainer>
+                        </LineChart>
+                    </ChartContainer>
+                </CardContent>
             </Card>
+
+            <div className="flex flex-col md:flex-row mt-4">
+                <a href="https://www.youtube.com/watch?v=g5kLpQLFnHs" target="_blank" className="w-full md:w-1/3">
+                        <ImageCard
+                            caption='My fastest solve on camera: "7.71 3x3 w/ CMLL, 4a, and 4b skip"'
+                            imageUrl='https://img.youtube.com/vi/g5kLpQLFnHs/maxresdefault.jpg'
+                            className="w-full"
+                        />
+                    </a>
+                <div className="flex flex-col justify-center pl-4">
+                    <h3 className="text-lg pt-6 pb-6">Fastest solve (on camera)</h3>
+                    <p>Generated By csTimer on 2025-07-14</p>
+                    <p>single: 7.71</p>
+                    <p>Time List:</p>
+                    <p>1. 7.71   D2 L2 B' D2 R2 B R2 B L2 B2 U' B2 D2 R U2 F R D L'</p>
+                    <p>Reconstruction:</p>
+                    <p>y z // inspection</p>
+                    <p>L U R' Uw L U L' U L U' L' // FB</p>
+                    <p>U R' M R U' R' U M2 U R' U2 R // SB</p>
+                    <p>// CMLL, 4a, & 4b skip</p>
+                    <p>U' M U2 M' // 4c</p>
+                </div>
+                {/* <div className="flex justify-between"> */}
+
+                {/* </div> */}
+            </div>
 
             <h2 className="text-xl pt-6 pb-6">Hypercubing</h2>
         </>
