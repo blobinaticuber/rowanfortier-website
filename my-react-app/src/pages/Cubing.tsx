@@ -2,6 +2,7 @@ import { BoxedLink } from "@/components/BoxedLink.tsx";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card.tsx";
 import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from "@/components/ui/chart.tsx";
 import { ImageCard } from "@/components/ui/image-card.tsx";
+import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table.tsx";
 import { FaTrophy } from 'react-icons/fa'
 import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts"
 
@@ -219,12 +220,51 @@ export function Cubing() {
                     <p>// CMLL, 4a, & 4b skip</p>
                     <p>U' M U2 M' // 4c</p>
                 </div>
-                {/* <div className="flex justify-between"> */}
-
-                {/* </div> */}
             </div>
 
             <h2 className="text-xl pt-6 pb-6">Hypercubing</h2>
+
+            <p>Hypercubing is the hobby of solving twisty puzzles in a higher amount of spatial dimensions rather than the usual 3D space. These puzzles are mathematically well defined, and can be visualized and simulated using computer software. </p>
+
+            <Table>
+                <TableCaption className="text-text">
+                    My personal hypercubing achievements
+                </TableCaption>
+                <TableHeader>
+                    <TableRow>
+                        <TableHead>Puzzle</TableHead>
+                        <TableHead>First Solve</TableHead>
+                        <TableHead>Solution Ranking</TableHead>
+                        <TableHead>Fastest Solve</TableHead>
+                    </TableRow>
+                </TableHeader>
+                <TableBody>
+                    <TableRow>
+                        <TableCell>3x3x3x3</TableCell>
+                        <TableCell>2021-03-06</TableCell>
+                        <TableCell>432</TableCell>
+                        <TableCell>3m 00.31s</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Physical 2x2x2x2</TableCell>
+                        <TableCell>2021-11-04</TableCell>
+                        <TableCell>22</TableCell>
+                        <TableCell>1m 18.24s</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>3x3x3x3x3</TableCell>
+                        <TableCell>2024-03-21</TableCell>
+                        <TableCell>99</TableCell>
+                        <TableCell>58m 47.79s</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>3x3x3x3x3x3</TableCell>
+                        <TableCell>2024-06-24</TableCell>
+                        <TableCell>-</TableCell>
+                        <TableCell>47h 23m 16.08s</TableCell>
+                    </TableRow>
+                </TableBody>
+            </Table>
         </>
     )
 }
