@@ -7,6 +7,7 @@ import { FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa'
 export function Home() {
     return (
         <>
+        <h1 className="text-3xl pb-6">About Me</h1>
             <div className="flex flex-col gap-4 md:flex-row pb-4">
                 <ImageCard
                     caption="Rowan Fortier"
