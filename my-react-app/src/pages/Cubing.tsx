@@ -1,8 +1,33 @@
 import { BoxedLink } from "@/components/BoxedLink.tsx";
 import { Card, CardContent } from "@/components/ui/card.tsx";
+import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from "@/components/ui/chart.tsx";
 import { ImageCard } from "@/components/ui/image-card.tsx";
 import { FaGithub, FaLinkedin, FaTrophy, FaYoutube } from 'react-icons/fa'
+import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
 
+
+const chartConfig = {
+  desktop: {
+    label: "Desktop",
+    color: "var(--chart-1)",
+  },
+} satisfies ChartConfig
+
+const chartData = [
+    {x: '2016-09-22', y: 20.296},
+    {x: '2016-09-26', y: 19.889},
+    {x: '2016-09-28', y: 19.047},
+    {x: '2016-10-01', y: 15.696},
+    {x: '2016-11-20', y: 15.017},
+    {x: '2016-12-11', y: 11.485},
+    {x: '2018-01-10', y: 10.71},
+    {x: '2020-03-17', y: 9.695},
+    {x: '2020-03-30', y: 9.694},
+    {x: '2020-12-26', y: 9.548},
+    {x: '2021-01-05', y: 8.574},
+    {x: '2021-02-23', y: 8.182},
+    {x: '2025-07-11', y: 7.09},
+]
 
 export function Cubing() {
     return (
@@ -27,57 +52,141 @@ export function Cubing() {
                     handle="Code Rowan for 5% off"
                     imageurl="/cubing/cubicle.png"
                 />
+                <BoxedLink
+                    url="https://www.speedsolving.com/wiki/index.php?title=Rowan_Fortier"
+                    name="speedsolving.com wiki"
+                    handle="Rowan Fortier"
+                    imageurl="https://www.speedsolving.com/wiki/images/ss-wiki-logo.png"
+                />
             </div>
 
-            <h1 className="text-xl pt-6 pb-6">History</h1>
+            <h2 className="text-xl pt-6 pb-6">History</h2>
+
+            <div className="*:pb-4">
+
+                <div className="flex flex-col md:flex-row">
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-lg pt-6 pb-6">January 2016</h3>
+                        <p>We always had a few Rubik's Cubes around the house when I was a kid, but in January 2016 I noticed my mom playing with a Rubik's Cube every now and then. She challenged me to see who could build a side of a single colour the fastest. She always won...</p>
+                    </div>
+                        <ImageCard
+                        caption="Trying to build a side of a single colour"
+                        imageUrl='/cubing/jan2016.png'
+                        className="w-full md:w-1/2"
+                    />
+                </div>
+
+                <div className="flex flex-col md:flex-row-reverse">
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-lg pt-6 pb-6">March 2016</h3>
+                        <p>One day I looked up a full tutorial on how to solve the cube, and pretended like I had figured it out myself to show off to my mom. My first ever timed solve was about 10 minutes. This was the beginning of an obsession thas has lasted for over a decade.</p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col md:flex-row">
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-lg pt-6 pb-6">April 2016</h3>
+                        <p>By April I had ordered several cubes and accessories online such as 2x2, 4x4, pyraminx, and a gear cube. My 3x3 PB was 31.7 seconds, and I averaged 38 seconds.</p>
+                    </div>
+                        <ImageCard
+                        caption="Solving a 3x3x3 with a stackmat timer"
+                        videoUrl='/cubing/april2016.mp4'
+                        className="w-full md:w-1/2"
+                    />
+                </div>
+
+                <div className="flex flex-col md:flex-row">
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-lg pt-6 pb-6">August 2016</h3>
+                        <p>By August I had a small collection of puzzles I ordered, as well as a couple of hand-made mods and inventions.</p>
+                    </div>
+                        <ImageCard
+                        caption="August 2016 cube collection"
+                        imageUrl='/cubing/collection_2016.JPG'
+                        className="w-full md:w-2/3"
+                    />
+                </div>
+
+                <div className="flex flex-col md:flex-row justify-between">
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-lg pt-6 pb-6">December 2016</h3>
+                        <p>My mom took me to my first speedsolving competition (Eugene Fall 2016). I placed 29th in the second round of 3x3, with a time of 21.55 seconds.</p>
+                    </div>
+                        <ImageCard
+                        caption="Competing in pyraminx at my first competition"
+                        imageUrl='/cubing/eugene_fall_2016.jpg'
+                        className="w-full md:w-2/3"
+                    />
+                </div>
+
+                <div className="flex flex-col md:flex-row-reverse">
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-lg pt-6 pb-6">2017-2019</h3>
+                        <p>During this time I went to 10 more competitions, including the Northwest Championships 2017 which was the biggest competition I had attended so far. I never got very good at speedsolving, so I developed other interests like developing new methods and collecting many puzzles.</p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col md:flex-row-reverse">
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-lg pt-6 pb-6">2020-2024</h3>
+                        <p>I began making more and more cubing videos on YouTube as COVID-19 lockdowns hit. My channel started to get noticed more and more until I landed a sponsorship with the online puzzle retailer TheCubicle. This is also when I discovered hypercubing (higher dimensional puzzles) and became extremely active in that community.</p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col md:flex-row justify-between">
+                    <div className="flex flex-col justify-center">
+                        <h3 className="text-lg pt-6 pb-6">July 2025</h3>
+                        <p>The Rubik's WCA World Championship 2025. I went as just a spectator, but I got to meet my online hypercubing friends, try out crazy puzzles, and watch world records holders speedsolve.</p>
+                    </div>
+                        <ImageCard
+                        caption="Hypercubers meet up at Worlds 2025"
+                        imageUrl='/cubing/worlds_2025.jpg'
+                        className="w-full md:w-2/3"
+                    />
+                </div>
 
 
-    <p>Some time in January 2016 I saw my mom playing with a Rubik's Cube, and we had a few little competitions to see who could build a side of a single colour the fastest. She always won, so one day I looked up a full tutorial on how to solve the cube, and pretended like I had figured it out myself to show off to my mom. My first ever timed solve was about 10 minutes.</p>
 
-    <div className="flex">
-        <div>
-            <h1 className="text-lg pt-6 pb-6">January 2016</h1>
-            <p>Some time in January 2016 I saw my mom playing with a Rubik's Cube, and we had a few little competitions to see who could build a side of a single colour the fastest. She always won</p>
-        </div>
-            <ImageCard
-            caption="Puzzle collection as of August 2016"
-            imageUrl='/cubing/collection_2016.JPG'
-            className="w-full md:w-1/2"
-        />
-
-    </div>
-
-    <h2>Speedsolving</h2>
-    <p>I've competed in 11 official competitions, and spectated at the 2025 World Championships. Check out my <a href="https://www.worldcubeassociation.org/persons/2016FORT03">World Cube Association</a> profile to see my official results and rankings! Below is a graph of my personal best times on the standard 3x3x3 Rubik's Cube.</p>
-
-    <div>
-      <canvas id="pbChart"></canvas>
-    </div>
-
-    <h2>Method Development</h2>
-
-    <a href="https://docs.google.com/document/d/14hz6NX0lf-BN6ATcUMg8H_GJQ0TR4xP7jh-v640zAJg/edit?usp=sharing" target="_blank">
-        <div >
-            <img src="images/projects/2xyz.png"/>
-            <div>
-                <h3>2xyz Method</h3>
-                <p>This method is a legit technique that technically reduces a 3x3x3 into a 2x2x2. It is not intended to be used for speedsolving or fewest moves purposes due to the fact that it has a very large average movecount.</p>
             </div>
-        </div>
-    </a>
 
-    <a href="https://www.youtube.com/watch?v=_cyhfD_waVI" target="_blank">
-        <div>
-            <img src="images/projects/ECPcube.png"/>
-            <div>
-                <h3>ECP Method</h3>
-                <p>ECP is a method that was invented for Athefre's Method Development Competition January 2021 by team Kübirz (which I was a part of). It is designed to use inspection to do an intuitive step, in order to get to algorithmic steps as quickly as possible. </p>
-            </div>
-        </div>
-    </a>
+            <h2 className="text-xl pt-6 pb-6">Speedsolving</h2>
+            <p>I've competed in 11 official competitions, and spectated at the 2025 World Championships. Check out my <a target="_blank" className="underline text-accent" href="https://www.worldcubeassociation.org/persons/2016FORT03">World Cube Association</a> profile to see my official results and rankings! Below is a graph of my personal best times on the standard 3x3x3 Rubik's Cube.</p>
 
-    <h2>Hypercubing</h2>
-    <p>In 2021, I learned about the 4-dimensional Rubik's Cube. It took me a week to solve it by following a written guide online. Since then I have held several speedsolving world records, helped create the hypercubing.xyz wiki, solved the 5D and 6D cubes, and fostered the community on the Discord server.</p>
+            <Card>
+                <ChartContainer config={chartConfig}>
+                    <LineChart
+                        accessibilityLayer
+                        data={chartData}
+                        margin={{
+                        left: 12,
+                        right: 12,
+                        }}
+                    >
+                        <CartesianGrid vertical={false} />
+                        <XAxis
+                        dataKey="x"
+                        tickLine={true}
+                        axisLine={true}
+                        tickMargin={8}
+                        tickFormatter={(value) => value.slice(0, 4)}
+                        />
+                        <ChartTooltip
+                        cursor={false}
+                        content={<ChartTooltipContent hideLabel />}
+                        />
+                        <Line
+                        dataKey="y"
+                        type="step"
+                        stroke="var(--color-desktop)"
+                        strokeWidth={2}
+                        dot={false}
+                        />
+
+                    </LineChart>
+                </ChartContainer>
+            </Card>
+
+            <h2 className="text-xl pt-6 pb-6">Hypercubing</h2>
         </>
     )
 }

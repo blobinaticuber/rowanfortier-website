@@ -11,8 +11,8 @@ type LinkProps = {
 function BoxedLink(link: LinkProps) {
     return (
         <a href={link.url} target="_blank">
-            <Card className="md:min-w-xs">
-                <CardContent className="hover:underline flex flex-row md:flex-col items-center justify-evenly md:justify-start md:items-start">
+            <Card className="md:max-w-xs">
+                <CardContent className="hover:underline flex flex-row md:flex-col items-center justify-start md:gap-0 gap-4 md:justify-start md:items-start">
                     {link.icon? link.icon : link.imageurl? <img className="h-[2em] w-[2em]" src={link.imageurl}/> : ""}
                     <p className="font-heading mt-3 text-lg sm:text-xl">
                         {link.name}

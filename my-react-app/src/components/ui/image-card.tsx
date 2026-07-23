@@ -1,12 +1,13 @@
 import { cn } from "@/lib/utils.js"
 
 type Props = {
-  imageUrl: string
+  imageUrl?: string
   caption: string
   className?: string
+  videoUrl?: string
 }
 
-function ImageCard({ imageUrl, caption, className }: Props) {
+function ImageCard({ imageUrl, caption, className, videoUrl }: Props) {
   return (
     <figure
       className={cn(
@@ -14,7 +15,12 @@ function ImageCard({ imageUrl, caption, className }: Props) {
         className,
       )}
     >
+      {videoUrl?
+      <video className="w-full" autoPlay muted loop src={videoUrl}></video>
+      :
       <img className="w-full" src={imageUrl} alt="image" />
+      }
+
       <figcaption className="border-t-2 text-text border-border p-4">
         {caption}
       </figcaption>
