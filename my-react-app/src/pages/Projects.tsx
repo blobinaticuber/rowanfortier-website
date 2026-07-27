@@ -52,6 +52,7 @@ export function Projects() {
 
     if (loading) return (
         <>
+        <h1 className="text-3xl pb-6">Projects</h1>
         <Card>
             <CardHeader>
                 <Skeleton className="h-6 w-1/4"/>
@@ -70,6 +71,7 @@ export function Projects() {
 
     return (
         <>
+            <h1 className="text-3xl pb-6">Projects</h1>
             <div className="flex flex-col h-[calc(100vh-9rem)]">
                 <ScrollArea>
                     <div className="flex flex-col gap-4 p-4">
