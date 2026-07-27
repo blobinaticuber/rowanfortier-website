@@ -33,11 +33,11 @@ export function Header() {
                                 <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/projects" ? "bg-accent" : ""}`}>
                                     <NavLink to="/projects">YouTube</NavLink>
                                 </NavigationMenuLink>
-                                <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/projects" ? "bg-accent" : ""}`}>
-                                    <NavLink to="/projects">Juggling</NavLink>
+                                <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/juggling" ? "bg-accent" : ""}`}>
+                                    <NavLink to="/juggling">Juggling</NavLink>
                                 </NavigationMenuLink>
                                 <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/projects" ? "bg-accent" : ""}`}>
-                                    <NavLink to="/projects">Fitnesse</NavLink>
+                                    <NavLink to="/projects">Fitness</NavLink>
                                 </NavigationMenuLink>
                             </div>
                         </NavigationMenuContent>
