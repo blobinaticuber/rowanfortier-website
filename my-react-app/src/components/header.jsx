@@ -26,19 +26,19 @@ export function Header() {
                     <NavigationMenuItem>
                         <NavigationMenuTrigger>Hobbies</NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <div className="grid grid-cols-2 w-64 gap-2">
+                            <div className="flex flex-col w-64 gap-2">
                                 <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/cubing" ? "bg-accent" : ""}`}>
                                     <NavLink to="/cubing">Rubik's Cube</NavLink>
                                 </NavigationMenuLink>
-                                <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/projects" ? "bg-accent" : ""}`}>
+                                {/* <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/projects" ? "bg-accent" : ""}`}>
                                     <NavLink to="/projects">YouTube</NavLink>
-                                </NavigationMenuLink>
+                                </NavigationMenuLink> */}
                                 <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/juggling" ? "bg-accent" : ""}`}>
                                     <NavLink to="/juggling">Juggling</NavLink>
                                 </NavigationMenuLink>
-                                <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/projects" ? "bg-accent" : ""}`}>
+                                {/* <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${location.pathname === "/projects" ? "bg-accent" : ""}`}>
                                     <NavLink to="/projects">Fitness</NavLink>
-                                </NavigationMenuLink>
+                                </NavigationMenuLink> */}
                             </div>
                         </NavigationMenuContent>
 
